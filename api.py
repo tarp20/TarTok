@@ -37,6 +37,7 @@ async def get_video():
     return JSONResponse(status_code=200, content=info.dict())
 
 
+
 @video_router.get('/test')
 async def get_test(req: Request):
     return {req.base_url}
