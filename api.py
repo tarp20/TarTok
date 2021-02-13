@@ -25,6 +25,7 @@ async def upload_image(info: UploadVideo, files: List[UploadFile] = File(...)):
 
 
 
+
 @video_router.get('/video',response_model=GetVideo)
 async def get_video():
     user = {'id': 25, 'name': 'Pipec'}
