@@ -1,16 +1,16 @@
 import datetime
-from ormar import Model,ModelMeta
+import ormar
 from db import metadata,database
 from typing import Optional
 
-class MainMeta(ModelMeta):
-    class Meta:
-        metadata = metadata
-        database = database
+class MainMeta(ormar.ModelMeta):
+    
+    metadata = metadata
+    database = database
 
 
 
-class User(Model):
+class User(ormar.Model):
     class Meta(MainMeta):
         pass
 
@@ -22,8 +22,8 @@ class User(Model):
 
 
 
-class Video(Model):
-    class Meta(ModelMeta):
+class Video(ormar.Model):
+    class Meta(MainMeta):
         pass
         
 
