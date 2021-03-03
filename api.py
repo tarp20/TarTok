@@ -33,6 +33,6 @@ async def get_video(video_pk:int):
 
 
 
-# @video_router.get('/test')
-# async def get_test(req: Request):
-#     return {req.base_url}
+@video_router.get('/test')
+async def get_test(req: Request):
+    return {req.base_url}
